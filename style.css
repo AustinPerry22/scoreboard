@@ -44,3 +44,17 @@ h2 {
 .blue-border {
     border: solid rgb(25, 183, 223) .15em;
 }
+
+@media(max-width:768px) {
+    body {
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
