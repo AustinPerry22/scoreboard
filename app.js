@@ -30,11 +30,17 @@ function draw() {
     homeId.innerText = home.toString();
     let awayId = document.getElementById("awayScore");
     awayId.innerText = away.toString();
+
+    // wait 25ms before running check winner to allow dom to update and show correct score. 
+    setTimeout(checkWinner, 25);
+}
+
+function checkWinner() {
     if (home >= 10) {
-        window.alert("Home Wins!")
+        alert("Home Wins!")
         reset()
     } else if (away >= 10) {
-        window.alert("Away Wins!")
+        alert("Away Wins!")
         reset()
     }
 }
