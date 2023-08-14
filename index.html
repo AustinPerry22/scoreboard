@@ -14,7 +14,7 @@
     <header class="container-fluid">
         <section class="row py-3 justify-content-end">
             <div class="col-2">
-                <button class="btn btn-primary btn-reset">
+                <button class="btn btn-primary btn-red" onclick="reset()">
                     RESET
                 </button>
             </div>
@@ -40,14 +40,14 @@
                     <div class="col-4 justify-content-center">
                         <section class="row score-area align-items-center">
                             <div class="col-12">
-                                <h1>0</h1>
+                                <h1 id="homeScore">0</h1>
                             </div>
                         </section>
                     </div>
                     <div class="col-4 justify-content-center">
                         <section class="row score-area align-items-center">
                             <div class="col-12">
-                                <h1>0</h1>
+                                <h1 id="awayScore">0</h1>
                             </div>
                         </section>
                     </div>
@@ -56,18 +56,26 @@
         </section>
         <section class="row py-5 justify-content-evenly">
             <div class="col-3 ">
-                <button class="btn btn-primary btn-blue">HOME +1</button>
+                <button class="btn btn-primary btn-blue" onclick="addScore('home', 1)">HOME +1</button>
             </div>
             <div class="col-3">
-                <button class="btn btn-primary btn-blue">AWAY +1</button>
+                <button class="btn btn-primary btn-blue" onclick="addScore('away', 1)">AWAY +1</button>
             </div>
         </section>
         <section class="row justify-content-evenly">
             <div class="col-3 ">
-                <button class="btn btn-primary btn-blue">HOME +3</button>
+                <button class="btn btn-primary btn-blue" onclick="addScore('home', 3)">HOME +3</button>
             </div>
             <div class="col-3 ">
-                <button class="btn btn-primary btn-blue">AWAY +3</button>
+                <button class="btn btn-primary btn-blue" onclick="addScore('away', 3)">AWAY +3</button>
+            </div>
+        </section>
+        <section class="row py-5 justify-content-evenly">
+            <div class="col-3 ">
+                <button class="btn btn-primary btn-red" onclick="addScore('home', -1)">HOME -1</button>
+            </div>
+            <div class="col-3 ">
+                <button class="btn btn-primary btn-red" onclick="addScore('away', -1)">AWAY -1</button>
             </div>
         </section>
     </main>
