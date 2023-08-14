@@ -1,7 +1,6 @@
 let home = 0;
 let away = 0;
 
-
 function reset() {
     home = 0;
     away = 0;
